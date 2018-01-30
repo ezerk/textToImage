@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate your own Oath</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container ">
+    <div class="row">
+        <div class="col s12 m4 generate-title center-align valign-wrapper">
+            <h2> generate your own </h2>
+            <img src="assets/oath-logo.jpg" class="logo"/>
+        </div>
+        <div class="col s12 m8 generate-form center-align valign-wrapper">
+            <div class="row">
+                <form class="col s12" id="preferences">
+
+                    <h5>Choose your style:</h5>
+                    <div class="row type-selection">
+                        <div class="option">
+                            <input id="corporate" type="radio" name="type" value="corporate"/>
+                            <label class="type-icon corporate" for="corporate">
+                                <img src="assets/icons/corporate.jpg">
+                                <div class="type-title">Corporate</div>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input id="funny" type="radio" name="type" value="funny"/>
+                            <label class="type-icon funny" for="funny">
+                                <img src="assets/icons/funny.jpg">
+                                <div class="type-title">Funny</div>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input id="movies" type="radio" name="type" value="movies"/>
+                            <label class="type-icon movies" for="movies">
+                                <img src="assets/icons/movies.jpg">
+                                <div class="type-title">Movies</div>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input id="quotes" type="radio" name="type" value="quotes"/>
+                            <label class="type-icon quotes" for="quotes">
+                                <img src="assets/icons/quotes.jpg">
+                                <div class="type-title">Quotes</div>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input id="nonsense" type="radio" name="type" value="nonsense"/>
+                            <label class="type-icon nonsense" for="nonsense">
+                                <img src="assets/icons/nonsense.jpg">
+                                <div class="type-title">Nonsense</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row random">
+                        <input type="checkbox" id="random"/>
+                        <label for="random"><h5 data-tooltip="Suprise yorself and others! a new Oath will be regenerated each time">Feeling brave?</h5>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <button class="waves-effect waves-teal btn-flat" type="submit">Generate</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row oath-preview" id="preview">
+                <img>
+            </div>
+            <div class="row" id="code-wrap">
+                <div id="code-preview"></div>
+                <button id="copy-code" onclick="copyCode()">Copy your oath!</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
